@@ -23,4 +23,3 @@ jobs:
         release_name: ${{ steps.split.outputs._2}}
         draft: false
         prerelease: false
-        generate_release_notes: true
