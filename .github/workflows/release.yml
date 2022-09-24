@@ -13,9 +13,8 @@ jobs:
         msg: ${{ github.ref }}
         separator: '/'
 
-    # - uses: actions/checkout@v3
     - name: Create Release
-      uses: zendesk/action-create-release@v1
+      uses: softprops/action-gh-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -23,3 +22,4 @@ jobs:
         release_name: ${{ steps.split.outputs._2}}
         draft: false
         prerelease: false
+        generate_release_notes: true
